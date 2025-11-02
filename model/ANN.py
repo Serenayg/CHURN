@@ -7,14 +7,15 @@
 
 
 import pandas as pd
-
+from pathlib import Path
 
 # In[3]:
 
 
 #Loading the dataset
 
-df = pd.read_csv("Churn_Modelling.csv")
+DATA_FILE = Path(__file__).resolve().parents[1] / "data" / "Churn_Modelling.csv"
+df = pd.read_csv(DATA_FILE)
 
 df.info()
 
